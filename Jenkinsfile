@@ -2,15 +2,15 @@ pipeline {
     agent any
     
     tools{
-        maven 'Maven-3.9.9'
+        maven 'Maven-3.9.11'
     }
     stages {
         stage('clone') {
             steps {
-              git 'https://github.com/ashokitschool/maven-web-app.git'
+              git 'https://github.com/satapriya04/test-maven-webapp.git'
             }
         }
-        stage('build'){
+        stage('Maven build'){
             steps{
                  sh 'mvn clean package'
             }
